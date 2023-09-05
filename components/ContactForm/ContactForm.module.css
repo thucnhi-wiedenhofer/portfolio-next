@@ -1,0 +1,134 @@
+.form {
+  width: 60%;
+}
+.fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formGroup {
+  width: calc(50% - 0.75em);
+}
+
+.label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 15px 0 2px 0px;
+}
+
+.input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: rgba(255,255,255,.24);
+  border: none;
+  border-radius: 5px;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 0 1em;
+  text-decoration: none;
+  width: 100%;
+  height: 44px;  
+}
+
+.input:focus, .input:hover {
+  border-color: #9bffc9;
+  box-shadow: 0 0 0 2px #9bffc9;
+}
+
+.textarea .input {
+  min-height: 150px;
+  padding: 12px 16px;
+  resize: none;
+}
+
+.rgpd {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 10px;
+  margin-top: 12px;
+}
+
+.btnSlide {
+  color: #ffff;
+  background-color: transparent;
+  border: 0;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 3px #9bffc9;
+  padding: 14px 30px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0px;
+  display: block;
+  cursor: pointer;
+}
+
+.btnSlide span {
+  position: relative;
+  z-index: 2;
+  color: #242943;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.btnSlide::after {
+  content: "";
+  position: absolute;
+  background-color: #ffff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btnSlide:hover::after {
+  transform: translateX(-100%);
+}
+
+.btnSlide:hover span {
+  color: #9bffc9;
+}
+
+@media (max-width: 1279px) {
+  .form {
+    width: 80%;
+    margin-top: 8%;
+    margin-bottom: 4%;
+  }
+}
+@media (max-width: 767px) {
+  .form:nth-child(1) {
+    order: 2;
+  }
+  .form {
+    width: 100%;
+    margin: 50px 0px;
+  }
+  .fields {
+    flex-direction: column;
+  }
+  .formGroup {
+    width: 100%;
+  }
+  .rgpd {
+    align-items: flex-start;
+  }
+  .checkbox {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .btnSlide {
+    font-size: 14px;
+  }
+}

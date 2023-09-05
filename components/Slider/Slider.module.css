@@ -1,0 +1,50 @@
+/* 
+slide horizontal avec 3 images:
+     8% par transition.
+     reste divisé par nb de pauses
+     76(%) / 3 = 25(%) par pause
+  */
+  
+  .sliderContainer {
+  max-width: 700px;
+  margin: 3% auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.sliderContainer .slider {
+  animation: slider 12s infinite ease-in-out;
+  display: flex;
+
+}
+.sliderContainer img {  
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+@keyframes slider {
+  0%,
+  25% {
+    transform: translateX(0);
+  }
+  33%,
+  58% {
+    transform: translateX(-100%);
+  }
+  66%,
+  91% {
+    transform: translateX(-200%);
+  }
+  
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+@media (max-width: 414px) {
+  .sliderContainer {
+    border-radius: 0;
+  }
+}
