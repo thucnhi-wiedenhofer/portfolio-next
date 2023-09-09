@@ -1,6 +1,7 @@
 import React from "react";
 import GalleryCard from "@/components/GalleryCard/GalleryCard";
 import styles from "@/styles/projets.module.css";
+import projects from "./../../data/projects";
 
 export default function index({ props }) {
   console.log(props);
@@ -12,21 +13,18 @@ export default function index({ props }) {
 
       <section id="projects" className={styles.container}>
         <div className={styles.row}></div>
-
       </section>
     </>
   );
 }
 
-export async function getStaticProps(){
-  const data = await import(`./../../data/vocabulary.json`)
-  const array = data.vocabulary;
- 
-  
+export async function getStaticProps() {
+  const data = await import(`./../../data/projects.js`);
+  const array = data.projects;
+
   return {
     props: {
-      array
-    }
-  }
+      array,
+    },
+  };
 }
-
