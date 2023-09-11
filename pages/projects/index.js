@@ -4,7 +4,6 @@ import styles from "@/styles/projets.module.css";
 import { projects } from "./../../data/projects";
 
 export default function index() {
-  console.log(projects);
   return (
     <>
       <section className={styles.banner} data-aos="fade-right">
