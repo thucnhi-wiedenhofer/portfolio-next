@@ -1,10 +1,10 @@
 import React from "react";
 import GalleryCard from "@/components/GalleryCard/GalleryCard";
 import styles from "@/styles/projets.module.css";
-import projects from "./../../data/projects";
+import { projects } from "./../../data/projects";
 
-export default function index({ props }) {
-  console.log(props);
+export default function index() {
+  console.log(projects);
   return (
     <>
       <section className={styles.banner} data-aos="fade-right">
@@ -12,19 +12,12 @@ export default function index({ props }) {
       </section>
 
       <section id="projects" className={styles.container}>
-        <div className={styles.row}></div>
+        <div className={styles.row}>
+          {projects.map((project, index) => (
+            <GalleryCard key={index} project={project} />
+          ))}
+        </div>
       </section>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const data = await import(`./../../data/projects.js`);
-  const array = data.projects;
-
-  return {
-    props: {
-      array,
-    },
-  };
 }
