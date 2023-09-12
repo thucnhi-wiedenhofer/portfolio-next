@@ -1,16 +1,31 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import styles from "./../ContactForm/ContactForm.module.css";
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useRouter } from "next/router";
+import { FirebaseContext } from "./../../firebase";
+import { toast } from "react-toastify";
 
 export default function ContactForm() {
+  //Use firebase to keep data in cloud and use hook useContext to
+  const { firebase } = useContext(FirebaseContext);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [checked, setChecked] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const router = useRouter();
+
+  //function to add a contact in firestore database
+  async function addContact(contact) {
+    try {
+      firebase.db.collection("contacts").add(contact);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,14 +38,7 @@ export default function ContactForm() {
       date,
     };
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
+    addContact(contact).then((res) => {
       console.log("Response received");
       if (res.status === 200) {
         console.log("Response succeeded!");

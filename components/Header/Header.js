@@ -10,7 +10,13 @@ export default function Header() {
       <nav className={styles.navbar}>
         <div>
           <Link href="/">
-            <Image src={Logo} alt="logo" width="200" height="67" />
+            <Image
+              src={Logo}
+              alt="logo"
+              width="200"
+              height="67"
+              priority={true}
+            />
           </Link>
         </div>
         <div>
