@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "./../../public/images/logo_1.png";
-import styles from "./../Header/header.module.css";
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
