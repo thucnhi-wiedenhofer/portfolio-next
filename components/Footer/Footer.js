@@ -13,22 +13,17 @@ export default function Footer() {
           <ul className={styles.nav}>
             <li className={styles.navItem}>
               <Link className={styles.link} aria-current="page" href="/">
-                Accueil
+                <span>Accueil</span>
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link className={styles.link} aria-current="page" href="/admin">
-                Administration
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link className={styles.btn} href="/projects">
-                Projets
+              <Link className={styles.btnSlide} href="/projects">
+                <span>Projets</span>
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link className={styles.btnOutline} href="/contact">
-                Contact
+                <span className={styles.span}>Contact</span>
               </Link>
             </li>
           </ul>
