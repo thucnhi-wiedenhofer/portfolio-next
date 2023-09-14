@@ -11,9 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
-      offset: 200, // offset (in px) from the original trigger point
-      delay: 400, // values from 0 to 3000, with step 50ms
-      duration: 800, // values from 0 to 3000, with step 50ms
+      offset: 200, 
+      delay: 100, 
+      duration: 600, 
       easing: "ease-in-out",
     });
   });

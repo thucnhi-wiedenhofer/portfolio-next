@@ -3,7 +3,7 @@ import styles from "@/styles/contact.module.css";
 //import ContactForm from "@/components/ContactForm/ContactForm";
 import Image from "next/image";
 import Aside from "@/components/Aside/Aside";
-import photo from "./../public/images/tnw_small_2.png";
+import photo from "./../public/images/tnw_small_2.jpg";
 
 export default function Contact() {
   return (
