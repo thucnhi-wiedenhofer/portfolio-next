@@ -13,7 +13,9 @@ export default function Aside() {
         <span className={styles.icon}>
           <Image src={mail} alt="mail logo" width="18" height="18" />
         </span>
-        <span><Link href="mailto: thucnhi.van@gmail.com">thucnhi.van@gmail.com</Link></span>
+        <span>
+          <Link href="mailto:thucnhi.van@gmail.com">thucnhi.van@gmail.com</Link>
+        </span>
       </div>
       <div className={styles.details}>
         <span className={styles.icon}>
