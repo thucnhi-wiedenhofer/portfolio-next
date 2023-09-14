@@ -1,5 +1,6 @@
 const projects = [
   {
+    id: "1",
     name: "Bopha",
     style: "smallCard",
     image_1: "bopha_home.jpg",
@@ -16,6 +17,7 @@ const projects = [
     url: "bopha",
   },
   {
+    id: "2",
     name: "Boutique",
     style: "bigCard",
     image_1: "gallery_panama.jpg",
@@ -32,6 +34,7 @@ const projects = [
     url: "panama",
   },
   {
+    id: "3",
     name: "Fisheye",
     style: "bigCard",
     image_1: "fisheye_profile.jpg",
@@ -48,6 +51,7 @@ const projects = [
     url: "fisheye",
   },
   {
+    id: "4",
     name: "OhMyFood",
     style: "smallCard",
     image_1: "myfood_app.jpg",
@@ -64,6 +68,7 @@ const projects = [
     url: "myfood",
   },
   {
+    id: "5",
     name: "Argent Bank",
     style: "smallCard",
     image_1: "apibank_home.jpg",
@@ -80,6 +85,7 @@ const projects = [
     url: "apibank",
   },
   {
+    id: "6",
     name: "Learn@Home",
     style: "bigCard",
     image_1: "maquette_1.jpg",
