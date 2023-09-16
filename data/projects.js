@@ -102,6 +102,7 @@ const projects = [
     url: "learn@home",
   },
   {
+    id: "7",
     name: "Mon CMS",
     style: "bigCard",
     image_1: "gallery_cms.jpg",
@@ -118,6 +119,7 @@ const projects = [
     url: "moncms",
   },
   {
+    id: "8",
     name: "Kasa",
     style: "smallCard",
     image_1: "kasa_home.jpg",
