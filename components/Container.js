@@ -10,7 +10,7 @@ export default function Container({ children }) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Thuc-Nhi Wiedenhofer"/>
+        <meta name="author" content="Thuc-Nhi Wiedenhofer" />
         <meta
           name="description"
           content="Passionnée par le développement web, je crée des sites web et des applications web. "
@@ -26,7 +26,7 @@ export default function Container({ children }) {
         />
         <meta
           property="og:image"
-          content="https://www.linkedin.com/in/thuc-nhi-wiedenhofer/overlay/background-image/"
+          content="https://tnw-portfolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fservices.e7a238ba.png&w=1920&q=75"
         />
         <meta
           property="og:description"
