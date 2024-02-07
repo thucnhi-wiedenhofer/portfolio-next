@@ -13,7 +13,7 @@ const projects = [
       "Le projet Bopha est un site vitrine responsive pour une décoratrice florale. Il présente sa personne ainsi que ses services, comprend une galerie de photos et un formulaire de contact.",
     description:
       "Ce site a été développé avec le framework React, Next.js pour sa simplicité de déploiement et l'optimisation du SEO.",
-    link: "https://bopha-website.vercel.app/",
+    link: "https://bopha.vercel.app/",
     url: "bopha",
   },
   {
